@@ -1,0 +1,41 @@
+# Further information under: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: Validate Project
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Checkout repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Extract Go version from go.mod
+      - name: Get Go version from go.mod
+        id: go-version
+        run: |
+          GO_VERSION=$(awk '/^go [0-9]+\.[0-9]+/' go.mod | awk '{ print $2 }')
+          echo "GO_VERSION=$GO_VERSION"
+          echo "go-version=$GO_VERSION" >> $GITHUB_ENV
+  
+      # Set up Go using the extracted version
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: ${{ env.go-version }}
+
+      # No build as we don't need an artifact
+      #- name: Build
+      #  run: go build -v ./...
+
+      # Execute all tests
+      - name: Test
+        run: go test -v ./...
