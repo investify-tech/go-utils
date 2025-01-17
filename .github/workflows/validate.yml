@@ -4,9 +4,13 @@ name: Validate Project
 
 on:
   push:
-    branches: # No branch filter means all branches are included
+    branches:
+       - '**'
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+    types:
+      - opened
 
 jobs:
 
