@@ -15,8 +15,8 @@ func TestCheckRequiredBinaries(t *testing.T) {
 			name: "All binaries present and valid",
 			args: args{
 				requiredBinaries: [][]string{
-					{"uname", "uname -v", "10.0.0"},
-					{"sh", "sh --version", "3.0.0"},
+					// Only one binary here for now as it is not clear which other binaries might be available to check in the github action
+					{"go", "go version", "1.20.0"},
 				},
 			},
 			shouldPanic: false,
@@ -25,7 +25,7 @@ func TestCheckRequiredBinaries(t *testing.T) {
 			name: "Binary missing",
 			args: args{
 				requiredBinaries: [][]string{
-					{"baaaash", "baaaash --version", "4.0.0"},
+					{"go++", "go++ version", "1.20.0"},
 				},
 			},
 			shouldPanic: true,
@@ -34,7 +34,7 @@ func TestCheckRequiredBinaries(t *testing.T) {
 			name: "Binary exists but version invalid",
 			args: args{
 				requiredBinaries: [][]string{
-					{"sh", "sh --version", "324.0.0"},
+					{"go", "go version", "500.0.0"},
 				},
 			},
 			shouldPanic: true,
