@@ -3,8 +3,7 @@ updates:
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
-#      interval: "weekly" # Options: daily, weekly, monthly
-      interval: "daily"
+      interval: "weekly" # Options: daily, weekly, monthly
 #    ignore:
 #      - dependency-name: "some-package" # Optional: To ignore specific packages
 #        versions: ["1.x"] # Optional: Ignore specific versions
