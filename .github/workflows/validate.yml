@@ -4,11 +4,9 @@ name: Validate Project
 
 on:
   push:
-    branches:
-      - '**'  # All branches
-  pull_request_target: # No double start of a pipeline when pushing to a branch with open pull request
-    branches:
-      - main
+    branches: # No branch filter means all branches are included
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
 
