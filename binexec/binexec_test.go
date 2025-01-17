@@ -15,7 +15,7 @@ func TestCheckRequiredBinaries(t *testing.T) {
 			name: "All binaries present and valid",
 			args: args{
 				requiredBinaries: [][]string{
-					{"bash", "bash --version", "4.0.0"},
+					{"uname", "uname -v", "10.0.0"},
 					{"sh", "sh --version", "3.0.0"},
 				},
 			},
