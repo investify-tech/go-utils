@@ -1,14 +1,13 @@
 module github.com/investify-tech/go-utils
 
 go 1.23
-
 require (
 	github.com/gookit/goutil v0.6.18
 	github.com/hashicorp/vault/api v1.16.0
 	github.com/mcuadros/go-version v0.0.0-20190830083331-035f6764e8d2
 	github.com/rs/zerolog v1.33.0
 	github.com/testcontainers/testcontainers-go v0.17.0
-	golang.org/x/crypto v0.33.0
+	golang.org/x/crypto v0.35.0
 )
 
 // FIXME: Needed for testcontainers-go v0.17.0 - likely to be removed when updating testcontainers-go to a later version
