@@ -6,7 +6,7 @@ require (
 	github.com/gookit/goutil v0.6.18
 	github.com/hashicorp/vault/api v1.16.0
 	github.com/mcuadros/go-version v0.0.0-20190830083331-035f6764e8d2
-	github.com/rs/zerolog v1.33.0
+	github.com/rs/zerolog v1.34.0
 	github.com/testcontainers/testcontainers-go v0.35.0
 	golang.org/x/crypto v0.36.0
 )
