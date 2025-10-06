@@ -4,7 +4,7 @@ go 1.24.0
 
 require (
 	github.com/gookit/goutil v0.7.1
-	github.com/hashicorp/vault/api v1.21.0
+	github.com/hashicorp/vault/api v1.22.0
 	github.com/mcuadros/go-version v0.0.0-20190830083331-035f6764e8d2
 	github.com/rs/zerolog v1.34.0
 	github.com/testcontainers/testcontainers-go v0.39.0
