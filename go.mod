@@ -3,7 +3,7 @@ module github.com/investify-tech/go-utils
 go 1.25.0
 
 require (
-	github.com/gookit/goutil v0.7.6
+	github.com/gookit/goutil v0.8.0
 	github.com/hashicorp/vault/api v1.23.0
 	github.com/mcuadros/go-version v0.0.0-20190830083331-035f6764e8d2
 	github.com/rs/zerolog v1.35.1
