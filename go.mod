@@ -1,6 +1,6 @@
 module github.com/investify-tech/go-utils
 
-go 1.25.0
+go 1.26.0
 
 require (
 	github.com/gookit/goutil v0.8.0
@@ -8,7 +8,7 @@ require (
 	github.com/mcuadros/go-version v0.0.0-20190830083331-035f6764e8d2
 	github.com/rs/zerolog v1.35.1
 	github.com/testcontainers/testcontainers-go v0.44.0
-	golang.org/x/crypto v0.55.0
+	golang.org/x/crypto v0.56.0
 )
 
 require (
